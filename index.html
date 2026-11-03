@@ -104,43 +104,70 @@ footer{padding:3rem 0;border-top:1px solid var(--line);color:var(--muted)}
   </svg>
 </header>
 
+
 <section id="experience">
   <h2>Experience</h2>
-  <div class="job"><div class="when">Aug – Oct 2026</div><div>
-    <h3>Associate <span>Premier Life Sciences LLC (contract)</span></h3>
-    <ul>
-      <li>Analyzed 13,000+ units produced monthly with Python and pandas, tracking a 0.5% average fault rate and recurring defects.</li>
-      <li>Investigated a 5% parts scrap rate using time-series, seasonality and hypothesis testing, and built Power BI reports for stakeholders.</li>
-    </ul></div></div>
-  <div class="job"><div class="when">May – Jul 2026</div><div>
-    <h3>Research Engineer <span>Betterway</span></h3>
-    <ul>
-      <li>Built and deployed an end-to-end MLOps system for 30-day hospital readmission risk scoring (<a href="#clinical-risk">Clinical Risk Prediction</a>). It runs as a Dockerized FastAPI service on Render with a web console, per-stay SHAP explanations and a high-risk flag.</li>
-      <li>Trained and compared logistic regression, XGBoost and LightGBM on 59,753 patient stays with patient-grouped splits. The LightGBM champion reached test PR-AUC 0.222 (1.93x lift over chance) and ROC-AUC 0.670, with bootstrap confidence ranges and subgroup fairness checks.</li>
-      <li>Set up MLflow tracking and a model registry with a pre-registered evaluation gate and champion/challenger promotion. Swapped a model in and out of live traffic with zero failed requests.</li>
-      <li>Monitored the live service with Prometheus and Grafana, plus a PSI drift exporter over 46 input features. Replayed 12 simulated weeks of holdout traffic with injected drift, kept the flagged share in an 18% to 24% band on clean weeks, and joined late labels to measure real performance.</li>
-      <li>Automated the retrain-gate-promote loop with a Prefect flow and added pytest and GitHub Actions CI.</li>
-  </ul></div></div>
-  <div class="job"><div class="when">Sep – Dec 2025</div><div>
-    <h3>Teaching Assistant <span>GWU Data Science Department</span></h3>
-    <ul>
-      <li>Guided about 20 students on ML system design, evaluation pipelines and error analysis.</li>
-      <li>Supported debugging of end-to-end ML workflows, including fine-tuning and deployment.</li>
-    </ul></div></div>
-  <div class="job"><div class="when">Jun – Dec 2025</div><div>
-    <h3>AI/ML Research Assistant <span>GWU Data Science Department</span></h3>
-    <ul>
-      <li>Built a LLaMA-3 pipeline that extracts and structures FDA drug-label data for 10,000 drugs.</li>
-      <li>Engineered a knowledge graph with NetworkX and integrated PrimeKG and Hetionet, reaching AUC 0.894 and F1 0.81 on link prediction over 10M+ edges.</li>
-    </ul></div></div>
-  <div class="job"><div class="when">Jun 2024 – Mar 2025</div><div>
-    <h3>Research Data Scientist <span>Bharat Smart Services Company</span></h3>
-    <ul>
-      <li>Built an LSTM appliance classifier for energy disaggregation, improving accuracy from 86% to 92%.</li>
-      <li>Designed ETL pipelines for energy data from 1,000+ households.</li>
-      <li>Trained a CNN appliance image model on AWS SageMaker (98% F1), containerized it with Docker and deployed it with GitHub Actions CI/CD.</li>
-    </ul></div></div>
+
+  <div class="job">
+    <div class="when">Aug – Oct 2026</div>
+    <div>
+      <h3>Associate <span>Premier Life Sciences LLC (contract)</span></h3>
+      <ul>
+        <li>Analyzed 13,000+ units produced monthly with Python and pandas, tracking a 0.5% average fault rate and recurring defects.</li>
+        <li>Investigated a 5% parts scrap rate using time-series, seasonality and hypothesis testing, and built Power BI reports for stakeholders.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="when">May – Jul 2026</div>
+    <div>
+      <h3>Research Engineer <span>Betterway</span></h3>
+      <ul>
+        <li>Built and deployed an end-to-end MLOps system for 30-day hospital readmission risk scoring (<a href="#clinical-risk">Clinical Risk Prediction</a>). It runs as a Dockerized FastAPI service on Render with a web console, per-stay SHAP explanations and a high-risk flag.</li>
+        <li>Trained and compared logistic regression, XGBoost and LightGBM on 59,753 patient stays with patient-grouped splits. The LightGBM champion reached test PR-AUC 0.222 (1.93x lift over chance) and ROC-AUC 0.670, with bootstrap confidence ranges and subgroup fairness checks.</li>
+        <li>Set up MLflow tracking and a model registry with a pre-registered evaluation gate and champion/challenger promotion. Swapped a model in and out of live traffic with zero failed requests.</li>
+        <li>Monitored the live service with Prometheus and Grafana, plus a PSI drift exporter over 46 input features. Replayed 12 simulated weeks of holdout traffic with injected drift, kept the flagged share in an 18% to 24% band on clean weeks, and joined late labels to measure real performance.</li>
+        <li>Automated the retrain-gate-promote loop with a Prefect flow and added pytest and GitHub Actions CI.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="when">Sep – Dec 2025</div>
+    <div>
+      <h3>Teaching Assistant <span>GWU Data Science Department</span></h3>
+      <ul>
+        <li>Guided about 20 students on ML system design, evaluation pipelines and error analysis.</li>
+        <li>Supported debugging of end-to-end ML workflows, including fine-tuning and deployment.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="when">Jun – Dec 2025</div>
+    <div>
+      <h3>AI/ML Research Assistant <span>GWU Data Science Department</span></h3>
+      <ul>
+        <li>Built a LLaMA-3 pipeline that extracts and structures FDA drug-label data for 10,000 drugs.</li>
+        <li>Engineered a knowledge graph with NetworkX and integrated PrimeKG and Hetionet, reaching AUC 0.894 and F1 0.81 on link prediction over 10M+ edges.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="when">Jun 2024 – Mar 2025</div>
+    <div>
+      <h3>Research Data Scientist <span>Bharat Smart Services Company</span></h3>
+      <ul>
+        <li>Built an LSTM appliance classifier for energy disaggregation, improving accuracy from 86% to 92%.</li>
+        <li>Designed ETL pipelines for energy data from 1,000+ households.</li>
+        <li>Trained a CNN appliance image model on AWS SageMaker (98% F1), containerized it with Docker and deployed it with GitHub Actions CI/CD.</li>
+      </ul>
+    </div>
+  </div>
 </section>
+
 
 <section id="projects">
   <h2>Projects</h2>
