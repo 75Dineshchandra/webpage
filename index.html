@@ -113,11 +113,13 @@ footer{padding:3rem 0;border-top:1px solid var(--line);color:var(--muted)}
       <li>Investigated a 5% parts scrap rate using time-series, seasonality and hypothesis testing, and built Power BI reports for stakeholders.</li>
     </ul></div></div>
   <div class="job"><div class="when">May – Jul 2026</div><div>
-    <h3>Research Data Analyst <span>Betterway</span></h3>
+    <h3>Research Engineer <span>Betterway</span></h3>
     <ul>
-      <li>Analyzed U.S. healthcare expenditure from 2010 to 2024, quantifying growth, CAGR and inflation-adjusted trends across Medicare and Medicaid.</li>
-      <li>Reviewed GAO reports on program integrity, covering over $100B in estimated improper payments in FY2023.</li>
-    </ul></div></div>
+      <li>Built and deployed an end-to-end MLOps system for 30-day hospital readmission risk scoring (<a href="#clinical-risk">Clinical Risk Prediction</a>). It runs as a Dockerized FastAPI service on Render with a web console, per-stay SHAP explanations and a high-risk flag.</li>
+      <li>Trained and compared logistic regression, XGBoost and LightGBM on 59,753 patient stays with patient-grouped splits. The LightGBM champion reached test PR-AUC 0.222 (1.93x lift over chance) and ROC-AUC 0.670, with bootstrap confidence ranges and subgroup fairness checks.</li>
+      <li>Set up MLflow tracking and a model registry with a pre-registered evaluation gate and champion/challenger promotion. Swapped a model in and out of live traffic with zero failed requests.</li>
+      <li>Monitored the live service with Prometheus and Grafana, plus a PSI drift exporter over 46 input features. Replayed 12 simulated weeks of holdout traffic with injected drift, kept the flagged share in an 18% to 24% band on clean weeks, and joined late labels to measure real performance.</li>
+      <li>Automated the retrain-gate-promote loop with a Prefect flow and added pytest and GitHub Actions CI.</li>
   <div class="job"><div class="when">Sep – Dec 2025</div><div>
     <h3>Teaching Assistant <span>GWU Data Science Department</span></h3>
     <ul>
