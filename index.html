@@ -176,7 +176,7 @@ footer{padding:3rem 0;border-top:1px solid var(--line);color:var(--muted)}
 <section id="projects">
   <h2>Projects</h2>
   <div class="proj">
-    <article class="card lead-card">
+    <article class="card">
       <h3>Health-Aware School Meal Recommendation</h3>
       <p>A contextual bandit system using data from 170 Fairfax County schools. It balances student preferences with nutrition requirements and cut regret by 76% against baselines. Under review at EAAI.</p>
       <ul class="tags">
@@ -236,7 +236,7 @@ footer{padding:3rem 0;border-top:1px solid var(--line);color:var(--muted)}
         <li>Automation</li>
       </ul>
     </article>
-    <article class="card">
+    <article class="card lead-card">
   <h3>GraphRAG-Based OpenFDA Drug Intelligence System</h3>
   <p>
     Built and evaluated a GraphRAG question-answering system over OpenFDA drug labels (110,843-node NetworkX knowledge graph, 10,840 generic drugs, 31,797 brands) using Llama 3 8B via Ollama. Progressed through five versions (V0 to V4): from whole-node embeddings with FAISS IndexFlatIP search, to section-aware chunking with BM25 + FAISS hybrid retrieval (Reciprocal Rank Fusion), data-driven drug and brand alias detection, cross-encoder reranking, token-budgeted context with source citations, few-shot prompting, code-based verification, and abstention when a label lacks the answer. Designed a 60-question benchmark across eight test types (drug-specific, symptom, brand, ambiguous, comparison, unanswerable, long-section, citation integrity) and hand-scored every version. Strict accuracy rose from 23.3% (baseline) to 40.0% (V1, V3), with V3 reaching 9/9 correct abstentions and the fewest wrong answers (11). Also ran a QLoRA fine-tune of Llama 3 8B, which did not improve results and was documented as a failed CoT implementation result.
