@@ -150,9 +150,11 @@ footer{padding:3rem 0;border-top:1px solid var(--line);color:var(--muted)}
     <div class="when">Jun – Dec 2025</div>
     <div>
       <h3>AI/ML Research Assistant <span>GWU Data Science Department</span></h3>
-      <ul>
-        <li>Built a LLaMA-3 pipeline that extracts and structures FDA drug-label data for 10,000 drugs.</li>
-        <li>Engineered a knowledge graph with NetworkX and integrated PrimeKG and Hetionet, reaching AUC 0.894 and F1 0.81 on link prediction over 10M+ edges.</li>
+     <ul>
+        <li>Built a LLaMA-3 pipeline that extracts and structures FDA drug-label data for 10,000 drugs, stored as a NetworkX knowledge graph (110K+ nodes, 355K+ edges).</li>
+        <li>Integrated PrimeKG and Hetionet into the graph, reaching AUC 0.894 and F1 0.81 on link prediction over 10M+ edges.</li>
+        <li>Developed clinical GraphRAG OpenFDA, a cited drug-label QA system using Llama-3 8B model, chunking, FAISS + BM25 hybrid search and reranking, which raised strict accuracy from 23% to 40% on a 60-question benchmark. </li>
+    </ul>  
       </ul>
     </div>
   </div>
@@ -237,7 +239,7 @@ footer{padding:3rem 0;border-top:1px solid var(--line);color:var(--muted)}
     <article class="card">
   <h3>GraphRAG-Based OpenFDA Drug Intelligence System</h3>
   <p>
-    Developed a GraphRAG pipeline integrating OpenFDA drug labels, Llama 3 via Ollama, and NetworkX knowledge graphs for LLM-powered drug intelligence and grounded question answering. Implemented semantic retrieval using nomic-embed-text embeddings, FAISS IndexFlatIP vector search, cosine similarity ranking, graph traversal, and context-aware prompt construction.
+    Built and evaluated a GraphRAG question-answering system over OpenFDA drug labels (110,843-node NetworkX knowledge graph, 10,840 generic drugs, 31,797 brands) using Llama 3 8B via Ollama. Progressed through five versions (V0 to V4): from whole-node embeddings with FAISS IndexFlatIP search, to section-aware chunking with BM25 + FAISS hybrid retrieval (Reciprocal Rank Fusion), data-driven drug and brand alias detection, cross-encoder reranking, token-budgeted context with source citations, few-shot prompting, code-based verification, and abstention when a label lacks the answer. Designed a 60-question benchmark across eight test types (drug-specific, symptom, brand, ambiguous, comparison, unanswerable, long-section, citation integrity) and hand-scored every version. Strict accuracy rose from 23.3% (baseline) to 40.0% (V1, V3), with V3 reaching 9/9 correct abstentions and the fewest wrong answers (11). Also ran a QLoRA fine-tune of Llama 3 8B, which did not improve results and was documented as a failed CoT implementation result.
   </p>
   <ul class="tags">
     <li>GraphRAG</li>
@@ -248,8 +250,13 @@ footer{padding:3rem 0;border-top:1px solid var(--line);color:var(--muted)}
     <li>Ollama</li>
     <li>Llama 3</li>
     <li>FAISS</li>
-    <li>Vector Search</li>
-    <li>Embeddings</li>
+    <li>BM25</li>
+    <li>Hybrid Search</li>
+    <li>Reranking</li>
+    <li>Citation Grounding</li>
+    <li>QLoRA Fine-Tuning</li>
+    <li>LLM Evaluation</li>
+    <li>nomic-embed-text</li>
     <li>Python</li>
   </ul>
 </article>
